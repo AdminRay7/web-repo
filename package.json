@@ -1,0 +1,33 @@
+{
+  "name": "303-xmd-web",
+  "version": "2.0.0",
+  "description": "303-XMD — Web Panel (Repo B)",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "license": "MIT",
+  "author": "303-XMD",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/303-xmd-web.git"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node --enable-source-maps server.js",
+    "dev": "node --watch --env-file=.env server.js",
+    "health": "node -e \"require('http').get('http://127.0.0.1:'+(process.env.PORT||3000)+'/health',r=>{let d='';r.on('data',c=>d+=c);r.on('end',()=>console.log(d))}).on('error',e=>console.error(e.message))\""
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pino": "^9.5.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^11.0.0"
+  },
+  "keywords": ["whatsapp", "panel", "proxy", "303-xmd"],
+  "files": ["server.js", "public/", "README.md", "LICENSE"]
+}
