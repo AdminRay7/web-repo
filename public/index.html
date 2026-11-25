@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>303-XMD — Panel</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1 id="bot-name">303-XMD</h1>
+      <p class="sub" id="bot-meta">loading…</p>
+    </header>
+
+    <section class="card">
+      <h2>Pair a device</h2>
+      <form id="pair-form">
+        <input id="phone" type="tel" placeholder="Phone (e.g. 254712345678)" required />
+        <input id="botName" type="text" placeholder="Bot name (optional)" maxlength="30" />
+        <input id="apiKey" type="password" placeholder="API key (if required)" />
+        <button type="submit">Get pairing code</button>
+      </form>
+      <pre id="pair-out" class="out"></pre>
+    </section>
+
+    <section class="card">
+      <h2>Session status</h2>
+      <form id="status-form">
+        <input id="sid" type="text" placeholder="Session ID" required />
+        <button type="submit">Check</button>
+      </form>
+      <pre id="status-out" class="out"></pre>
+    </section>
+
+    <footer class="foot">
+      <span id="foot-text">303-XMD — THE LAST KEY</span>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
